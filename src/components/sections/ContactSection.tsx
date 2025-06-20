@@ -96,7 +96,7 @@ export default function ContactSection() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Your Name</FormLabel>
+                        <FormLabel>Raju kumar</FormLabel>
                         <FormControl>
                           <Input placeholder="John Doe" {...field} />
                         </FormControl>

@@ -108,7 +108,7 @@ export default function AboutSection() {
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
           <div className="flex flex-col items-center md:items-start md:col-span-1">
             <Avatar className="h-48 w-48 md:h-64 md:w-64 mb-6 border-4 border-accent shadow-lg">
-              <AvatarImage src="https://placehold.co/300x300.png" alt="Your Name" data-ai-hint="professional portrait" />
+              <AvatarImage src="https://placehold.co/300x300.png" alt="Raju kumar" data-ai-hint="professional portrait" />
               <AvatarFallback>YN</AvatarFallback>
             </Avatar>
             <h3 className="text-2xl font-semibold mb-2 text-center md:text-left font-headline">Your Name</h3>

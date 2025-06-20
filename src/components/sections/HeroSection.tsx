@@ -9,7 +9,7 @@ export default function HeroSection() {
       <div className="container relative z-10 mx-auto px-4 text-center md:px-6">
         <div className="max-w-3xl mx-auto animate-fade-in">
           <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl font-headline">
-            Your Name
+            Raju kumar
           </h1>
           <p className="mt-4 text-2xl text-primary sm:text-3xl font-medium">
             Full-Stack Developer
