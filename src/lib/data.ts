@@ -1,77 +1,78 @@
 import type { Project } from '@/components/ui/ProjectCard';
 import type { SkillCategory } from '@/components/sections/SkillsSection';
 import type { TimelineEvent } from '@/components/ui/TimelineEvent';
-import { Briefcase, GraduationCap, CodeXml, Server, Settings2, Database, Github, Zap, Users } from 'lucide-react';
+import { Briefcase, GraduationCap, CodeXml, Server, Settings2, Database, Github, Zap, Users, ShieldCheck, Palette, Cloud, Coffee } from 'lucide-react';
 
-export const name = 'Raju Kumasr';
+export const name = 'Raju Kumar';
 export const contact = {
   phone: '+91-9798118939',
   email: 'rajukumarnitian@gmail.com',
   linkedin: 'https://linkedin.com/in/raju-kumar',
+  github: 'https://github.com/your-github', // Replace with your GitHub username
+  twitter: 'https://twitter.com/your-twitter', // Replace with your Twitter username
 };
 
 export const projectsData: Project[] = [
   {
-    name: 'Food Delivery System Using MERN Stack',
-    description: 'Developed features including User Authentication, Authorization, Login/Logout pages, My Cart, and My Order functionalities. Enabled account creation and login, integrated APIs for seamless food ordering processes.',
-    imageUrl: '', // Add a relevant image URL if you have one
-    imageHint: 'Food delivery application built with MERN stack',
-    techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js'],
-    githubUrl: 'YOUR_GITHUB_LINK_HERE', // Add your GitHub link
-    liveUrl: 'YOUR_LIVE_LINK_HERE', // Add your live link
-    startDate: 'Mar 2023',
-    endDate: 'Aug 2023',
+    name: 'Food Delivery System (MERN Stack)',
+    description: 'Engineered a full-stack food delivery application featuring robust user authentication, real-time order tracking, and an intuitive cart management system. Integrated multiple APIs to streamline the food ordering process from selection to delivery.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'food delivery app',
+    techStack: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST APIs'],
+    githubUrl: 'https://github.com/your-github/food-delivery', // Add your GitHub link
+    liveUrl: 'https://your-live-link.com/food-delivery', // Add your live link
   },
   {
-    name: 'Real-Time Chat App',
-    description: 'Designed real-time messaging system for seamless, scalable user-to-user interactions. Allowed instant chat capabilities upon username entry with dynamically users.',
-    imageUrl: '', // Add a relevant image URL if you have one
-    imageHint: 'Real-time chat application',
-    techStack: ['HTML5', 'CSS3', 'Node.js', 'Socket.io'],
-    githubUrl: 'YOUR_GITHUB_LINK_HERE', // Add your GitHub link
-    liveUrl: 'YOUR_LIVE_LINK_HERE', // Add your live link
-    startDate: 'Jan 2023',
-    endDate: 'Mar 2023',
+    name: 'Real-Time Chat Application',
+    description: 'Developed a dynamic, real-time messaging platform enabling seamless and scalable user-to-user interactions. The system supports instant chat capabilities with dynamic user lists, built on a resilient and low-latency architecture.',
+    imageUrl: 'https://placehold.co/600x400.png',
+    imageHint: 'chat application interface',
+    techStack: ['HTML5', 'CSS3', 'Node.js', 'Socket.io', 'WebSocket'],
+    githubUrl: 'https://github.com/your-github/chat-app', // Add your GitHub link
+    liveUrl: 'https://your-live-link.com/chat-app', // Add your live link
   },
 ];
 
 export const skillsData: SkillCategory[] = [
   {
-    title: 'Programming Languages',
+    title: 'Languages & Databases',
     icon: CodeXml,
     skills: [
-      { name: 'C++', level: 85, icon: CodeXml }, // Adjust level based on your proficiency
-      { name: 'JavaScript', level: 80, icon: Zap }, // Adjust level
-      { name: 'SQL', level: 75, icon: Database }, // Adjust level
+      { name: 'C++', level: 85 },
+      { name: 'JavaScript (ES6+)', level: 80 },
+      { name: 'SQL (PostgreSQL)', level: 75 },
+      { name: 'MongoDB', level: 80 },
     ],
   },
   {
-    title: 'Technology/Frameworks',
+    title: 'Frameworks & Libraries',
     icon: Server,
     skills: [
-      { name: 'GitHub', level: 90, icon: Github }, // Adjust level
-      { name: 'React', level: 85, icon: CodeXml }, // Adjust level
-      { name: 'Node.JS', level: 80, icon: Server }, // Adjust level
-      { name: 'MongoDB', level: 80, icon: Database }, // Adjust level
+      { name: 'React.js', level: 85 },
+      { name: 'Next.js', level: 80 },
+      { name: 'Node.js', level: 80 },
+      { name: 'Express.js', level: 85 },
+      { name: 'Spring Boot', level: 70, icon: Coffee },
     ],
   },
   {
-    title: 'Coursework/Skills',
-    icon: CodeXml, // Using CodeXml as a generic icon, replace if you have a better one
-    skills: [
-      { name: 'Data Structure & Algorithms', level: 88, icon: CodeXml }, // Adjust level
-      { name: 'OOPs Concepts', level: 85, icon: CodeXml }, // Adjust level
-      { name: 'Operating System', level: 75, icon: Users }, // Adjust level
-      { name: 'DBMS', level: 78, icon: Database }, // Adjust level
-    ],
-  },
-  {
-    title: 'DevOps & Tools',
+    title: 'Tools & Platforms',
     icon: Settings2,
     skills: [
-      { name: 'Docker & Kubernetes', level: 80, icon: Server }, // Using Server as a generic icon, replace if you have a better one
-      // You can add other relevant DevOps and tools skills here if you have them.
-      // Examples: CI/CD, Cloud Platforms (AWS, Azure, GCP), etc.
+      { name: 'Git & GitHub', level: 90 },
+      { name: 'Docker', level: 75 },
+      { name: 'AWS (EC2, S3)', level: 65, icon: Cloud },
+      { name: 'Postman', level: 95 },
+    ],
+  },
+  {
+    title: 'Core Competencies',
+    icon: ShieldCheck,
+    skills: [
+      { name: 'Data Structures & Algorithms', level: 88 },
+      { name: 'Object-Oriented Programming', level: 85 },
+      { name: 'Operating Systems', level: 75 },
+      { name: 'Database Management Systems', level: 78 },
     ],
   },
 ];
@@ -80,8 +81,8 @@ export const experienceData: TimelineEvent[] = [
   {
     year: '4 years',
     title: 'Teaching Experience',
-    institution: '', // You can add the institution name if applicable
-    description: 'Possess four years of teaching experience during which I have created and implemented my unique approach. This innovative teaching method has consistently yielded exceptional results, as evidenced by the success and satisfaction of my students.',
+    institution: 'Private Tutoring',
+    description: 'Developed and implemented a unique, result-oriented teaching methodology for computer science subjects, leading to significant improvements in student performance and comprehension over four years.',
     icon: Briefcase,
   },
 ];
@@ -96,9 +97,9 @@ export const educationData: TimelineEvent[] = [
   },
   {
     year: '2017 - 2020',
-    title: 'BSc (IT)',
+    title: 'BSc in Information Technology',
     institution: 'Doranda College, Ranchi',
-    description: 'Percentage: 84.67',
+    description: 'Percentage: 84.67%',
     icon: GraduationCap,
   },
 ];
@@ -108,4 +109,3 @@ export const achievementsData: string[] = [
   'Solved 500+ Problems on: Leetcode , Codeforces , GFG, Hackerrank',
   'NIMCET Entrance Exam (2021): Secured Rank AIR 549',
 ];
-

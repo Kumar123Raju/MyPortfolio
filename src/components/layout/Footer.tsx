@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import { Github, Linkedin, Twitter } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { name, contact } from '@/lib/data';
 
 const socialLinks = [
-  { name: 'GitHub', href: 'https://github.com/yourusername', icon: Github },
-  { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: Linkedin },
-  { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: Twitter },
+  { name: 'GitHub', href: contact.github, icon: Github },
+  { name: 'LinkedIn', href: contact.linkedin, icon: Linkedin },
+  { name: 'Twitter', href: contact.twitter, icon: Twitter },
 ];
 
 export default function Footer() {
@@ -19,13 +20,13 @@ export default function Footer() {
             {socialLinks.map((link) => (
               <Button key={link.name} variant="ghost" size="icon" asChild>
                 <Link href={link.href} target="_blank" rel="noopener noreferrer" aria-label={link.name}>
-                  <link.icon className="h-5 w-5 text-accent" />
+                  <link.icon className="h-5 w-5 text-accent transition-colors hover:text-accent/80" />
                 </Link>
               </Button>
             ))}
           </div>
           <p className="text-sm text-muted-foreground">
-            &copy; {currentYear} Raju kumar. All rights reserved.
+            &copy; {currentYear} {name}. All rights reserved.
           </p>
         </div>
       </div>

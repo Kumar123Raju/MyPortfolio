@@ -1,15 +1,32 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ResumeButton from "@/components/ResumeButton";
+import { name } from "@/lib/data";
 
 export default function HeroSection() {
   return (
-    <section id="home" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-gradient-hero">
-      <div className="absolute inset-0 bg-background/30 backdrop-blur-sm"></div>
+    <section id="home" className="relative flex min-h-[calc(100vh-4rem)] items-center justify-center overflow-hidden bg-background">
+      <div className="absolute inset-0 z-0 bg-gradient-hero"></div>
+      <div className="absolute inset-0 z-0">
+        {[...Array(25)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute rounded-full bg-primary/20 animate-pulse"
+            style={{
+              width: `${Math.random() * 3 + 1}px`,
+              height: `${Math.random() * 3 + 1}px`,
+              top: `${Math.random() * 100}%`,
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 10}s`,
+              animationDuration: `${Math.random() * 10 + 10}s`,
+            }}
+          />
+        ))}
+      </div>
       <div className="container relative z-10 mx-auto px-4 text-center md:px-6">
         <div className="max-w-3xl mx-auto animate-fade-in">
-          <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl font-headline">
-            Raju kumar
+          <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl font-headline text-glow">
+            {name}
           </h1>
           <p className="mt-4 text-2xl text-primary sm:text-3xl font-medium">
             Full-Stack Developer
@@ -25,23 +42,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-      {/* Optional: Subtle animated shapes or particles */}
-      {/* <div className="absolute inset-0 z-0 opacity-10">
-        {[...Array(10)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-primary/50 animate-pulse"
-            style={{
-              width: `${Math.random() * 100 + 50}px`,
-              height: `${Math.random() * 100 + 50}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${Math.random() * 5 + 5}s`,
-            }}
-          />
-        ))}
-      </div> */}
     </section>
   );
 }

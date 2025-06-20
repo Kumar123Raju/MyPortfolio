@@ -10,6 +10,7 @@ import type { LucideIcon } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '../ui/button';
 import { Skeleton } from '../ui/skeleton';
+import { name } from '@/lib/data';
 
 interface TechStackItem {
   name: string;
@@ -102,16 +103,18 @@ export default function AboutSection() {
   return (
     <section id="about" ref={sectionRef} className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
-          About Me
-        </h2>
+        <div className="animate-fade-in">
+          <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-primary sm:text-4xl font-headline">
+            About Me
+          </h2>
+        </div>
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
-          <div className="flex flex-col items-center md:items-start md:col-span-1">
+          <div className="flex flex-col items-center md:items-start md:col-span-1 animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <Avatar className="h-48 w-48 md:h-64 md:w-64 mb-6 border-4 border-accent shadow-lg">
-              <AvatarImage src="https://placehold.co/300x300.png" alt="Raju kumar" data-ai-hint="professional portrait" />
-              <AvatarFallback>YN</AvatarFallback>
+              <AvatarImage src="https://placehold.co/300x300.png" alt={name} data-ai-hint="professional portrait" />
+              <AvatarFallback>RK</AvatarFallback>
             </Avatar>
-            <h3 className="text-2xl font-semibold mb-2 text-center md:text-left font-headline">Your Name</h3>
+            <h3 className="text-2xl font-semibold mb-2 text-center md:text-left font-headline">{name}</h3>
             <p className="text-muted-foreground text-center md:text-left">Full-Stack Developer</p>
              <Button asChild variant="link" className="mt-4 text-accent p-0 h-auto">
               <Link href="#contact">
@@ -119,8 +122,8 @@ export default function AboutSection() {
               </Link>
             </Button>
           </div>
-          <div className="md:col-span-2">
-            <Card className="shadow-lg">
+          <div className="md:col-span-2 space-y-8">
+            <Card className="shadow-lg animate-fade-in" style={{ animationDelay: '0.4s' }}>
               <CardHeader>
                 <CardTitle className="text-2xl font-headline text-primary">My Story</CardTitle>
               </CardHeader>
@@ -140,7 +143,7 @@ export default function AboutSection() {
               </CardContent>
             </Card>
             
-            <Card className="mt-8 shadow-lg">
+            <Card className="shadow-lg animate-fade-in" style={{ animationDelay: '0.6s' }}>
               <CardHeader>
                 <CardTitle className="text-2xl font-headline text-primary">Core Technologies</CardTitle>
               </CardHeader>

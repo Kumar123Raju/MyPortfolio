@@ -4,35 +4,36 @@ import { ThemeProvider } from '@/components/ThemeProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Toaster } from "@/components/ui/toaster";
+import { name, contact } from '@/lib/data';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Devfolio | Full-Stack Developer',
-    template: '%s | Devfolio',
+    default: `${name} | Full-Stack Developer`,
+    template: `%s | ${name}`,
   },
-  description: 'Personal portfolio of a Full-Stack Developer, showcasing projects, skills, and experience.',
-  keywords: ['Full-Stack Developer', 'Portfolio', 'React', 'Next.js', 'Java', 'Spring Boot', 'Web Development'],
-  authors: [{ name: 'Your Name' }], // Replace with actual name
+  description: `Personal portfolio of ${name}, a Full-Stack Developer, showcasing projects, skills, and experience.`,
+  keywords: ['Full-Stack Developer', 'Portfolio', 'React', 'Next.js', 'Java', 'Spring Boot', 'Web Development', name],
+  authors: [{ name: name }],
   openGraph: {
-    title: 'Devfolio | Full-Stack Developer',
-    description: 'Personal portfolio of a Full-Stack Developer.',
+    title: `${name} | Full-Stack Developer`,
+    description: `Personal portfolio of ${name}, a Full-Stack Developer.`,
     type: 'website',
     locale: 'en_US',
     url: 'https://yourdomain.com', // Replace with actual domain
-    siteName: 'Devfolio',
+    siteName: name,
     // images: [ // Add a placeholder or actual image for social sharing
     //   {
     //     url: 'https://yourdomain.com/og-image.png',
     //     width: 1200,
     //     height: 630,
-    //     alt: 'Devfolio - Full-Stack Developer Portfolio',
+    //     alt: `${name} - Full-Stack Developer Portfolio`,
     //   },
     // ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Devfolio | Full-Stack Developer',
-    description: 'Personal portfolio of a Full-Stack Developer.',
+    title: `${name} | Full-Stack Developer`,
+    description: `Personal portfolio of ${name}, a Full-Stack Developer.`,
     // site: '@yourtwitterhandle', // Replace with actual Twitter handle
     // creator: '@yourtwitterhandle', // Replace with actual Twitter handle
     // images: ['https://yourdomain.com/twitter-image.png'], // Replace with actual image
@@ -52,8 +53,8 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' }, // Example light theme color
-    { media: '(prefers-color-scheme: dark)', color: '#22222A' }, // Dark gray
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' }, // New dark theme color
   ],
 }
 

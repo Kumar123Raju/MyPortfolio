@@ -18,6 +18,7 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Github, Linkedin, Twitter, Send, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import { useToast } from "@/hooks/use-toast";
+import { contact } from "@/lib/data";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
@@ -66,14 +67,14 @@ export default function ContactSection() {
   };
 
   const contactInfo = [
-    { icon: Mail, text: "your.email@example.com", href: "mailto:your.email@example.com" },
-    { icon: Phone, text: "+1 (234) 567-8900", href: "tel:+12345678900" },
+    { icon: Mail, text: contact.email, href: `mailto:${contact.email}` },
+    { icon: Phone, text: contact.phone, href: `tel:${contact.phone}` },
   ];
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com/yourusername', icon: Github },
-    { name: 'LinkedIn', href: 'https://linkedin.com/in/yourusername', icon: Linkedin },
-    { name: 'Twitter', href: 'https://twitter.com/yourusername', icon: Twitter },
+    { name: 'GitHub', href: contact.github, icon: Github },
+    { name: 'LinkedIn', href: contact.linkedin, icon: Linkedin },
+    { name: 'Twitter', href: contact.twitter, icon: Twitter },
   ];
 
   return (
@@ -96,7 +97,7 @@ export default function ContactSection() {
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel>Raju kumar</FormLabel>
+                        <FormLabel>Your Name</FormLabel>
                         <FormControl>
                           <Input placeholder="John Doe" {...field} />
                         </FormControl>

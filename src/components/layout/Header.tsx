@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
 import { ThemeToggle } from '@/components/ThemeToggle';
 import { cn } from '@/lib/utils';
+import { name } from '@/lib/data';
 
 const navItems = [
   { label: 'Home', href: '#home' },
@@ -65,7 +66,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="text-2xl font-bold text-primary font-headline">
-          Devfolio1234567
+          {name}
         </Link>
         <nav className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (
@@ -86,7 +87,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[280px] bg-background p-4">
               <div className="mb-6 flex items-center justify-between">
                  <Link href="#home" className="text-xl font-bold text-primary font-headline">
-                  Devfolio
+                  {name}
                 </Link>
                 <SheetClose asChild>
                    <Button variant="ghost" size="icon">
