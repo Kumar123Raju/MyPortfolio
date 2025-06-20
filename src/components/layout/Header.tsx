@@ -65,7 +65,7 @@ export default function Header() {
     >
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="#home" className="text-2xl font-bold text-primary font-headline">
-          Devfolio
+          Devfolio1234567
         </Link>
         <nav className="hidden items-center space-x-6 md:flex">
           {navItems.map((item) => (
